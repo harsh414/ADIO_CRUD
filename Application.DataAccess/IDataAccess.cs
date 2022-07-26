@@ -19,7 +19,7 @@ namespace Application.DataAccess
         // Get a single records based on the id
         TEntity Get(TPk id);
         // Create a new Record
-        TEntity Craete(TEntity entity);
+        TEntity Create(TEntity entity);
         // Update
         TEntity Update(TPk id, TEntity entity);
         // Delete

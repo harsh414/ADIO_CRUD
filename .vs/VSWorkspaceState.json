@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application.Console.UI",
+    "\\Application.DataAccess",
+    "\\Application.Entities"
+  ],
+  "SelectedNode": "\\Application.Console.UI\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

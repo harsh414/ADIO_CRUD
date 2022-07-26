@@ -12,17 +12,16 @@ namespace Application.DataAccess
         SqlConnection Conn;
         SqlCommand Cmd;
 
-        /// <summary>
-        /// Instantiate the Connection Object
-        /// </summary>
+
         public DepartmentDataAccess()
         {
-            Conn = new SqlConnection("Data Source=.;Initial Catalog=UCompany;Integrated Security=SSPI");
+            Conn = new SqlConnection("Data Source=IN-9RVTJM3;Initial Catalog=Ucompany;Integrated Security=SSPI");
         }
 
-        Department IDataAccess<Department, int>.Craete(Department entity)
+        Department IDataAccess<Department, int>.Create(Department entity)
         {
             Department department = new Department();
+
             try
             {
                 Conn.Open();
@@ -64,6 +63,11 @@ namespace Application.DataAccess
             {
                 throw ex;
             }
+            finally
+            {
+                Conn.Close();
+            }
+
             return department;
         }
 
@@ -144,6 +148,7 @@ namespace Application.DataAccess
             {
                 throw ex;
             }
+            finally {Conn.Close(); }
             return department;
         }
 
